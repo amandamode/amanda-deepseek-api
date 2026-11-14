@@ -1,0 +1,4 @@
+interface:
+  display_name: "Amanda DeepSeek API"
+  short_description: "Search, read documents, and process audio with DeepSeek"
+  default_prompt: "Use $amanda-deepseek-api to search the web with DeepSeek and show the source links."
