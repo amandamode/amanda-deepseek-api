@@ -7,21 +7,23 @@
 [![Open issues](https://img.shields.io/github/issues/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/issues)
 [![Last commit](https://img.shields.io/github/last-commit/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/commits/main/)
 
-在 Codex 或 Claude Code 里，用**你自己的 DeepSeek API Key** 搜网页、以图搜图、读 PDF、识别图片文字、转写录音和生成配音。请求直连 DeepSeek 官方 API，费用由对应的 DeepSeek 账户承担。
+适用于支持 [Agent Skills](https://agentskills.io/specification) 的工具，例如 Codex、Claude Code、Cursor。用**你自己的 DeepSeek API Key** 搜网页、以图搜图、读 PDF、识别图片文字、转写录音和生成配音。也可以直接在终端运行附带的 Python CLI。请求直连 DeepSeek 官方 API，费用由对应的 DeepSeek 账户承担。
+
+运行环境需要 **Python 3.9 或更新版本**，能够访问 DeepSeek 官方 API，并能读取 `DEEPSEEK_API_KEY`。无需额外安装 Python 包。已验证从 GitHub 安装到 Codex，并用 Python 3.13 实测 API 调用。Python 3.9 和 3.10 已检查脚本语法。
 
 ## 快速开始
 
 ### 1. 安装 Skill
 
-在项目目录打开终端。安装需要 Node.js 22.20+ 和 npm，运行脚本需要 Python 3.9+，无需安装 Python 包。
+在项目目录打开终端。使用 `npx skills` 安装需要 Node.js 22.20+ 和 npm。
 
 ```bash
 npx skills add amandamode/amanda-deepseek-api --skill amanda-deepseek-api
 ```
 
-按提示选择 Codex 或 Claude Code。想明确安装到 Codex，可以在命令末尾加 `--agent codex`。
+按提示选择你使用的 Agent。也可以用 `--agent` 指定目标，例如 `--agent codex`。查看 [安装工具支持的 Agent](https://github.com/vercel-labs/skills#supported-agents)。
 
-手动安装时，从 [Releases](https://github.com/amandamode/amanda-deepseek-api/releases/latest) 下载 `Amanda-DeepSeek-API-v1.1.0.zip`，把解压得到的 `amanda-deepseek-api` 文件夹放进项目的 `.agents/skills/`（Codex）或 `.claude/skills/`（Claude Code）。
+手动安装时，从 [Releases](https://github.com/amandamode/amanda-deepseek-api/releases/latest) 下载 `Amanda-DeepSeek-API-v1.1.0.zip`，把解压得到的 `amanda-deepseek-api` 文件夹放进你的 Agent 所用的技能目录。例如 Codex 项目的 `.agents/skills/` 或 Claude Code 项目的 `.claude/skills/`。
 
 ### 2. 配置你自己的 Key
 
