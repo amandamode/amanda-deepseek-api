@@ -1,5 +1,12 @@
 # Amanda DeepSeek API
 
+[![GitHub Release](https://img.shields.io/github/v/release/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/releases/latest)
+[![MIT License](https://img.shields.io/github/license/amandamode/amanda-deepseek-api)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/stargazers)
+[![Forks](https://img.shields.io/github/forks/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/forks)
+[![Open issues](https://img.shields.io/github/issues/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/issues)
+[![Last commit](https://img.shields.io/github/last-commit/amandamode/amanda-deepseek-api)](https://github.com/amandamode/amanda-deepseek-api/commits/main/)
+
 在 Codex 或 Claude Code 里，用**你自己的 DeepSeek API Key** 搜网页、以图搜图、读 PDF、识别图片文字、转写录音和生成配音。请求直连 DeepSeek 官方 API，费用由对应的 DeepSeek 账户承担。
 
 ## 快速开始
@@ -12,7 +19,9 @@
 npx skills add amandamode/amanda-deepseek-api --skill amanda-deepseek-api
 ```
 
-按提示选择 Codex 或 Claude Code。想明确安装到 Codex，可以在命令末尾加 `--agent codex`。手动安装时，把本仓库文件放入项目的 `.agents/skills/amanda-deepseek-api/`（Codex）或 `.claude/skills/amanda-deepseek-api/`（Claude Code），保留目录结构。
+按提示选择 Codex 或 Claude Code。想明确安装到 Codex，可以在命令末尾加 `--agent codex`。
+
+手动安装时，从 [Releases](https://github.com/amandamode/amanda-deepseek-api/releases/latest) 下载 `Amanda-DeepSeek-API-v1.1.0.zip`，把解压得到的 `amanda-deepseek-api` 文件夹放进项目的 `.agents/skills/`（Codex）或 `.claude/skills/`（Claude Code）。
 
 ### 2. 配置你自己的 Key
 
@@ -87,4 +96,4 @@ export DEEPSEEK_API_KEY
 
 提交的查询、网页地址或文件会发送给 DeepSeek。文件问答结束后，脚本会尝试删除本次上传的文件，上传时也会请求一小时有效期。用量按 DeepSeek 账户计费。 [官方价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
 
-由 **Amanda Mode** 维护。使用 DeepSeek 公开 API。
+由 **Amanda Mode** 维护，按 [MIT 许可证](LICENSE) 发布。使用 DeepSeek 公开 API。
