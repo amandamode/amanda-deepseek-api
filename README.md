@@ -67,7 +67,15 @@ export DEEPSEEK_API_KEY
 | 把录音转成文字 | `asr recording.wav` | 转写文字和音频时长 |
 | 普通问答 | `chat "把这段话改成口语" --safety-high` | Flash 回答，可开启高级内容审核 |
 
-扫描版或带图表的 PDF 可给 `document` 加 `--layout`。若模型报告 PDF 内容不可读，Skill 会尝试 OCR 后再回答，结果中的 `source: "ocr"` 表示回答基于识别出的文字，本次调用也会增加 OCR 与模型用量。TTS 提供 **Stella 女声**和 **Tide 男声**。每个命令都支持 `--help`，更多说明见 [接口与结果核对](references/api.md)。
+扫描版或带图表的 PDF 可给 `document` 加 `--layout`。若模型报告 PDF 内容不可读，Skill 会尝试 OCR 后再回答，结果中的 `source: "ocr"` 表示回答基于识别出的文字，本次调用也会增加 OCR 与模型用量。每个命令都支持 `--help`，更多说明见 [接口与结果核对](references/api.md)。
+
+## 配音试听
+
+同一句普通话由 DeepSeek 的两款音色合成。
+
+> 今天阳光正好，我们来测试一下中文语音合成和语音识别。
+
+[海星 Stella 女声（WAV，4.92 秒）](assets/deepseek-stella-zh.wav?raw=true) · [暗潮 Tide 男声（WAV，5.44 秒）](assets/deepseek-tide-zh.wav?raw=true)
 
 ## 实测记录
 
